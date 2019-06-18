@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor\Http\Requests\User;
+namespace DevOpsTest\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 

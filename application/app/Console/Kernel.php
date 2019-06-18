@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor\Console;
+namespace DevOpsTest\Console;
 
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

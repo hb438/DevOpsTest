@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor\Models;
+namespace DevOpsTest\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

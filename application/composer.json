@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rhllor\\": "app/"
+            "DevOpsTest\\": "app/"
         },
         "classmap": [
             "database/seeds",

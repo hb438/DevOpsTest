@@ -63,7 +63,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Rhllor\User::class,
+            'model' => DevOpsTest\User::class,
         ],
 
     ],

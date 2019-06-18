@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor\Http;
+namespace DevOpsTest\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 

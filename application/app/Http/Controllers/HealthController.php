@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor\Http\Controllers;
+namespace DevOpsTest\Http\Controllers;
 
 class HealthController extends Controller
 {

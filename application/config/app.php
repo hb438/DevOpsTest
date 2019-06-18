@@ -169,7 +169,7 @@ return [
         /*
          * Application Service Providers...
          */
-        Rhllor\Providers\RouteServiceProvider::class,
+        DevOpsTest\Providers\RouteServiceProvider::class,
 
     ],
 

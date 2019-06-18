@@ -1,10 +1,10 @@
 <?php
 
-namespace Rhllor\Http\Controllers;
+namespace DevOpsTest\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Rhllor\Http\Requests\User\ReadRequest;
-use Rhllor\Models\User;
+use DevOpsTest\Http\Requests\User\ReadRequest;
+use DevOpsTest\Models\User;
 
 class UserController extends Controller
 {

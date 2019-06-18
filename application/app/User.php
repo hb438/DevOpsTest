@@ -1,6 +1,6 @@
 <?php
 
-namespace Rhllor;
+namespace DevOpsTest;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
