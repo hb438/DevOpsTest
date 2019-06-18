@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: dev-test-nginx
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    volumes:
+      - ./application:/var/www/html
+      - ./nginx/logs/:/var/log/nginx
+      - ./nginx/sites/:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+      - "442:443"
+    links:
+      - php-fpm
+    networks:
+      - internal-network
+
+  php-fpm:
+    container_name: dev-test-php-fpm
+    restart: always
+    env_file: env/${ENV}.env
+    build:
+      context: ./php-fpm
+      dockerfile: Dockerfile
+    expose:
+      - "9000"
+    volumes:
+      - ./application:/var/www/html
+    networks:
+      - internal-network
+
+  postgres:
+    container_name: dev-test-postgresql
+    build:
+      context: ./postgresql
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgresql/data/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - internal-network
+
+  redis:
+    container_name: dev-test-redis
+    build:
+      context: ./redis
+      dockerfile: Dockerfile
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis/data/:/var/lib/redis/data
+    networks:
+      - internal-network
+
+networks:
+  internal-network:
+    driver: bridge
