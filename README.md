@@ -31,4 +31,4 @@ There can also be CI pipeline that can be implemented using jenkins where a new 
 
 The security aspects can be tightend by deploying app wihtin the private subnet and passing traffic through the ALB.
 
-Pending bit is assigning the DNS to a relevent container.
+Pending bit is assigning the DNS to a relevent container and logging in cloudwatch or splunk.
