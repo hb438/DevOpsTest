@@ -75,7 +75,7 @@ resource "aws_ecs_task_definition" "Devopstest" {
     "volumes": [
       "./redis/data/:/var/lib/redis/data"
     ],
-    "image": "dev-test-redi",
+    "image": "dev-test-redis",
     "essential": true,
     "portMappings": [
       {
