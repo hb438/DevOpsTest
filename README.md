@@ -25,7 +25,7 @@ The infra consists of ALB, ASG, ECS Cluster, VPC and is deployed using terraform
 
 Alternate way to deploy:
 
-The app can also be deployed in K8's cluster where individual services will be deloyed in pods and exposed using services and Ingress controller.
+The app can also be deployed in K8's cluster where individual services will be deployed in pods and exposed using services and Ingress controller.
 
 There can also be CI pipeline that can be implemented using jenkins where a new version of app can be pushed to aws ECR repo and then new pods with replcia sets is deployed/updated.
 
